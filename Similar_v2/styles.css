@@ -16,6 +16,21 @@ hr {
     margin-bottom: 0;
 }
 
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Inter';
+    font-weight: 100;
+}
+
+h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 48px;
+    font-family: 'Inter';
+    font-weight: 100;
+}
+
 a {
     font-family: 'Inter';
     font-size: 32px;
@@ -29,19 +44,4 @@ a:link, a:visited {
 
 a:hover, a:active {
     color: #00bfff	;
-}
-
-p {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-family: 'Inter';
-    font-weight: 100;
-}
-
-h2 {
-    font-family: 'Inter';
-    margin-bottom: 0;
-    margin-top: 0;
-    font-size: 48px;
-    font-weight: 100;
 }

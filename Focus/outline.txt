@@ -1,0 +1,4 @@
+description
+	define
+		focus is a lightweight web application designed force 
+how-to
