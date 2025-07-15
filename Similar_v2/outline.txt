@@ -1,4 +1,42 @@
 description
 	define
+		what it is
+			application
+			local database
+		who its for
+		picture
+	type of input
+	expected output
 		
 how-to
+	copy public spotify playlist
+		picture
+	paste in search box
+		picture
+	generate
+	listen to song samples
+		picture
+	add to playlist of your choosing
+		picture
+
+documentation
+	prereqs
+	installing
+	integrating python
+	front end - CS
+	back end - PYTHON
+		scripts
+			modules needed 
+			structure
+		api calls
+			spotipy
+				setting up api
+		database - sqlite3
+			what gets stored
+				number of songs
+			structure
+				value types
+			adding to db
+				api limitations
+	Final Thoughts
+			

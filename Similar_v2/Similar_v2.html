@@ -14,8 +14,87 @@
     <br><a href="https://github.com/Jirrer/Similar_v2" target="_blank">GitHub</a>
     <hr>
     <h1>Description</h1>
-    
+    <h2>What is Similar?</h2>
+    <hr>
+    <h1>How-To</h1>
+    <hr>
+    <h1>Documentation</h1>
+    <h2>Prerequisites</h2>
+    <p>
+        Similar version 2.0 requires a couple prerequisites before it can be ran on your
+        machine:
+        <ul><li>
+            Python 3.7 or higher - Used by backend .py scripts, as well as embedding
+            Python into the c# frontend. 
+        </li></ul>
+        <ul><li>
+            Spotify Web API key - Key will be stored within a .env file and is required
+            for the program to be able to contact Spotify's servers.
+        </li></ul>
+        <ul><li>
+            A public Spotify playlist - To tell the program the type of recommended songs
+            that are desired. 
+        </li></ul>
+    </p>
+    <h2>Installing</h2>
+    <p>
+        To install Similar Version 2.0, 
+    </p>
+    <h2>Configuring Python</h2>
+    <p>
+        For the program to work, Python's DLL file, environment path, and lib/site-packages
+        directory MUST all be configured. The default directory on windows for these files
+        is normally "C:\Users\username\AppData\Local\Programs\Python\Python39". These file 
+        paths can potiently be difficult to locate if Python was set up using a custom
+        installation. The required file locations should be accessible using the "where 
+        python" command in cmd. Once these paths are located on you machine, go to the 
+        .env file located within \src. Then, simply paste each path into the corrisponding 
+        variable.
+        <br>Example:
+        <br>{picture of a path}
+        <br>{picture of end file} 
+        <br>It is important to note that moving any of these Python file paths will cause
+         Similar to become unstable and stop working.
+    </p>
+    <h2>Frontend</h2>
+    <p>
+        Similars frontend is written in c# on the WPF (Windows Presentation Foundation)
+        framework. These c# files are located within the \src folder because they need
+        to be within the same directory as the embedded py files. There is no extra setup
+        required for these c# files as everything is handled during the installation.
+    </p>
+    <h2>Backend</h2>
+    <h3>Scripts</h3>
+    <p>
+        The backend's scripts are written in Python and interact heavily with the Spotify
+        Web API. This interaction is carried out through the Spotipy module.
+    </p>
+    <h3>APIs</h3>
+    <p>
+        You will need to access a Spotify Web API key - 
+        <a class="InlineLInk" href="https://developer.spotify.com/documentation/web-api"
+        target="_blank">Spotify Web API Info</a>. Your Client ID and Client Secret will need
+        to be pasted into the .env file located within \src and should be ensured that they
+        are up to date. The python scripts are set up to not overload Spotify's requests 
+        limit and will stop sending calls if they detect a request overload. This can 
+        become essecially prominate when using the methods within the "Update_db.py" 
+        file (see the Database section for more). This file keeps track of the number of 
+        added songs - or attempted added songs - for that day and will stop sending request 
+        if that number becomes to large. This means there is a set number of new songs that 
+        can be added per day, or else spotify will block all request coming from your key 
+        (making the program unusable). 
+    </p>
+    <h3>Database</h3>
+    <p>
+        The "Spotify_IDs.db" file is a sqlite3 file that houses all the IDs, Artists, and
+        Genres for the songs used by the program. New songs can either be added manually, 
+        or can come from the "Update_db.py" file located within \src (IMPORTANT - see 
+        APIs section for details on using Update_db). Each value type is TEXT. 
+    </p>
+    <h2>Final Thoughts</h2>
+    <p>
 
+    </p>
     
 </body>
 </html>
