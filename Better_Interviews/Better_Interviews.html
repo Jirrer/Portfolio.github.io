@@ -4,13 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Irrer - Better Interviews</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../ProjectStyles.css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <h1>Better Interviews</h1>
     <hr>
 </head>
 <body>
-    <a href="../index.html">Back</a>
-    
+    <a href="../index.html"><- Back</a>
+    <h2>Description</h2>
+    <p>
+        Better Interview is a web-based application designed to help job seekers track and prepare for upcoming
+        interviews. The app provides a clear visual overview of your interview progress using three circle graphs
+        that display the ratio of accepted, pending, and rejected interviews.
+        <br><br>
+        Beyond tracking, Better Interview also helps with preparation. When a new interview is created, the backend
+        sends the interview details to a Gemini AI prompt, which generates a personalized study plan tailored to
+        the position, company, and relevant skills.
+    </p>
+
+    <h2>How-To</h2>
+    <p>
+        To use Better Interview:
+        <ol>
+            <li>Log in to your account or sign up if you are a new user.</li>
+            <li>Click “Add New Interview” and enter the required details, including position, company, and interview date.</li>
+            <li>Once submitted, the app will display your interview in the dashboard and automatically generate a study plan using Gemini AI.</li>
+            <li>Use the circle graphs to quickly see your interview status breakdown (Accepted, Pending, Rejected).</li>
+        </ol>
+    </p>
+    <hr>
+
+    <h1>Documentation</h1>
+    <h2>Prerequisites</h2>
+    <p>
+        Better Interview requires the following before it can run:
+        <ul><li>
+            Node.js 16 or higher - Required for backend operations and Gemini API calls.
+        </li></ul>
+        <ul><li>
+            A modern web browser - For the best experience, Chrome or Edge is recommended.
+        </li></ul>
+        <ul><li>
+            Gemini API key - Used to generate personalized interview study plans.
+        </li></ul>
+        <ul><li>
+            Database connection - The app uses a database to store interviews and their statuses.
+        </li></ul>
+    </p>
+
+    <h2>Configuring Environment Variables</h2>
+    <p>
+        All required keys and configuration values must be stored in the <code>.env</code> file located in the project root. Example:
+    </p>
+    <pre>
+    GEMINI_API_KEY=your_gemini_key_here
+    DATABASE_URL=your_database_connection_string
+    </pre>
+    <p>
+        Keep this file private to ensure sensitive credentials are not exposed.
+    </p>
+
+    <h2>Frontend</h2>
+    <p>
+        The frontend is built with HTML, CSS, and JavaScript, providing a responsive layout for both desktop and
+        mobile use. The dashboard prominently features three animated circle graphs showing the distribution of
+        interview statuses.
+    </p>
+
+    <h2>Backend</h2>
+    <h3>Interview Tracking</h3>
+    <p>
+        The backend stores all interview data, including the position, company name, date, and status. This data
+        is used to calculate the ratios displayed in the frontend circle graphs.
+    </p>
+
+    <h3>Gemini Integration</h3>
+    <p>
+        When a new interview is added, the backend sends the interview details to a Gemini AI prompt. Gemini
+        processes the information and returns a tailored study plan, which may include company research topics,
+        common role-specific interview questions, and suggested practice exercises.
+    </p>
+
+    <h3>Database</h3>
+    <p>
+        The database stores all interviews with their associated metadata. Status updates trigger the frontend
+        graphs to refresh, ensuring real-time accuracy.
+    </p>    
 </body>
 </html>

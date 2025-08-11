@@ -4,19 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Irrer - Similar v2</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../ProjectStyles.css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <h1>Similar Version 2.0</h1>
     <hr>
 </head>
 <body>
-    <a href="../index.html">Back</a>
+    <a href="../index.html"> <- Back</a>
     <br><a href="https://github.com/Jirrer/Similar_v2" target="_blank">GitHub</a>
     <hr>
-    <h1>Description</h1>
-    <h2>What is Similar?</h2>
-    <hr>
-    <h1>How-To</h1>
+    <h2>Description</h2>
+    <p>
+        While Similar v2 builds upon the foundation set in version 1, it operates very different
+        under the hood. As opposed to being merely a Gemini AI wrapper, version 2 houses a 
+        database for the codebase to search for songs locally. This limits external API calls 
+        dramatically. Another big change in version 2 is the UI. Similar v2 is offered in a .NET app environment
+        rather than a web app.
+    </p>
+    <h2>How-To</h2>
+    <p>
+        To use Similar v2, simply paste a public spotify playlist url into the search box. The
+        program will then provide 30 new recommended songs. 
+    </p>
     <hr>
     <h1>Documentation</h1>
     <h2>Prerequisites</h2>
@@ -36,10 +45,6 @@
             that are desired. 
         </li></ul>
     </p>
-    <h2>Installing</h2>
-    <p>
-        To install Similar Version 2.0, 
-    </p>
     <h2>Configuring Python</h2>
     <p>
         For the program to work, Python's DLL file, environment path, and lib/site-packages
@@ -50,9 +55,6 @@
         python" command in cmd. Once these paths are located on you machine, go to the 
         .env file located within \src. Then, simply paste each path into the corrisponding 
         variable.
-        <br>Example:
-        <br>{picture of a path}
-        <br>{picture of end file} 
         <br>It is important to note that moving any of these Python file paths will cause
          Similar to become unstable and stop working.
     </p>
@@ -90,10 +92,5 @@
         or can come from the "Update_db.py" file located within \src (IMPORTANT - see 
         APIs section for details on using Update_db). Each value type is TEXT. 
     </p>
-    <h2>Final Thoughts</h2>
-    <p>
-
-    </p>
-    
 </body>
 </html>

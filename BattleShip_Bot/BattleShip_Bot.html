@@ -4,16 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Irrer - BattleShip Bot</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../ProjectStyles.css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <h1>BattleShip Bot</h1>
     <hr>
 </head>
 <body>
-    <a href="../index.html">Back</a>
+    <a href="../index.html"><- Back</a>
     <br><a href="https://github.com/Jirrer/Group_Project_3110" target="_blank">GitHub</a>
     <hr>
+    <h2>Description</h2>
+    <p>
+        Battleship Bot is a C# project developed as part of a group assignment where the goal was to create an
+        automated Battleship player capable of competing against other bots. The bot uses strategic algorithms
+        to place ships, target opponents, and optimize its chances of winning the game.
+    </p>
 
-    
+    <h2>How-To</h2>
+    <p>
+        To use Battleship Bot:
+        <ol>
+            <li>Compile the C# project using your preferred IDE (e.g., Visual Studio).</li>
+            <li>Run the bot executable to start a match against another bot.</li>
+            <li>The bot will automatically place its ships and make moves without user input.</li>
+            <li>Observe the match progress via the console or UI output (depending on implementation).</li>
+        </ol>
+    </p>
+    <hr>
+
+    <h1>Documentation</h1>
+    <h2>Prerequisites</h2>
+    <p>
+        Battleship Bot requires:
+        <ul><li>
+            .NET Framework or .NET Core SDK installed - Compatible with the C# version used in the project.
+        </li></ul>
+        <ul><li>
+            An IDE or compiler capable of building C# projects (Visual Studio recommended).
+        </li></ul>
+    </p>
+
+    <h2>Project Structure</h2>
+    <p>
+        The project consists of multiple classes handling different aspects of the bot:
+        <ul>
+            <li><code>Ship</code> - Manages ship placement and tracking.</li>
+            <li><code>Board</code> - Represents the game board state.</li>
+            <li><code>BotLogic</code> - Contains the targeting and decision-making algorithms.</li>
+            <li><code>GameController</code> - Coordinates game flow and bot interactions.</li>
+        </ul>
+    </p>
+
+    <h2>Bot Strategy</h2>
+    <p>
+        The bot employs a combination of probability-based targeting and pattern recognition to efficiently find
+        and sink opponent ships. It adapts its strategy based on hit/miss feedback to improve accuracy over time.
+    </p>
+
+    <h2>Running Matches</h2>
+    <p>
+        Matches can be run locally against other bots by launching multiple instances or integrating into a
+        tournament framework. The bot’s input and output are designed to be compatible with the provided
+        Battleship game engine.
+    </p>
 </body>
 </html>

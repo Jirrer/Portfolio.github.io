@@ -4,17 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Irrer - Michigan Analytics</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../ProjectStyles.css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-    <h1>Similar Michigan Analytics</h1>
+    <h1>Michigan Analytics</h1>
     <hr>
 </head>
 <body>
-    <a href="../index.html">Back</a>
+    <a href="../index.html"><- Back</a>
     <br><a href="https://github.com/Jirrer/Health-Analytics" target="_blank">GitHub</a>
     <br><a href="https://youtu.be/UFAmfG9Belo" target="_blank">Tutorial</a>
     <hr>
+    <h2>Description</h2>
+    <p>
+        Michigan Analytics is a web application designed to visualize the relationship between household income
+        and health disparities across Michigan counties. The interactive interface features a map of Michigan
+        split into individual counties, allowing users to either click on a county or search for it by name.
+        <br><br>
+        Once a county is selected, two line graphs are displayed:
+        <ul>
+            <li>Household income trends over the years for the selected county.</li>
+            <li>The county's health ranking compared to the rest of the state over time.</li>
+        </ul>
+        All health and income data is sourced from the Michigan Census Bureau and stored locally in CSV files
+        for efficient access and analysis.
+    </p>
 
-    
+    <h2>How-To</h2>
+    <p>
+        Using Michigan Analytics:
+        <ol>
+            <li>Open the application in a supported web browser.</li>
+            <li>Locate the county of interest by either:
+                <ul>
+                    <li>Clicking directly on the map.</li>
+                    <li>Using the search bar to type the county’s name.</li>
+                </ul>
+            </li>
+            <li>View the two generated line graphs showing income trends and health ranking data for that county.</li>
+            <li>Compare and analyze the data to better understand potential correlations between income levels and health outcomes.</li>
+        </ol>
+    </p>
+    <hr>
+
+    <h1>Documentation</h1>
+    <h2>Prerequisites</h2>
+    <p>
+        Michigan Analytics requires the following:
+        <ul><li>
+            A modern web browser - Chrome, Edge, or Firefox recommended for best performance.
+        </li></ul>
+        <ul><li>
+            Node.js 16 or higher - For backend data handling (if server-side processing is used).
+        </li></ul>
+        <ul><li>
+            CSV data files - Containing household income and health ranking data sourced from the Michigan Census Bureau.
+        </li></ul>
+    </p>
+
+    <h2>Data Configuration</h2>
+    <p>
+        The application reads data from two primary CSV datasets:
+        <ul>
+            <li><code>income.csv</code> - Contains annual household income figures for each county over multiple years.</li>
+            <li><code>health.csv</code> - Contains annual health ranking data for each county compared to the rest of Michigan.</li>
+        </ul>
+        These files should be placed in the <code>/data</code> directory of the project. The file format must remain
+        consistent for the application to parse them correctly.
+    </p>
+
+    <h2>Frontend</h2>
+    <p>
+        The frontend is built with HTML, CSS, and JavaScript, featuring:
+        <ul>
+            <li>An interactive map of Michigan with clickable counties.</li>
+            <li>A search bar for quickly locating specific counties.</li>
+            <li>Two dynamic line graphs rendered using a charting library (e.g., Chart.js or D3.js) to visualize income and health data.</li>
+        </ul>
+    </p>
+
+    <h2>Backend</h2>
+    <h3>Data Handling</h3>
+    <p>
+        The backend reads and processes CSV data from the <code>/data</code> directory. Data is filtered by county
+        selection, then sent to the frontend for graph rendering.
+    </p>
+
+    <h3>Map Integration</h3>
+    <p>
+        The county map is generated using a GeoJSON or SVG-based representation of Michigan. Click events and search
+        queries trigger updates to the displayed graphs.
+    </p>
+
+    <h3>Data Source</h3>
+    <p>
+        All datasets originate from the <a href="https://www.census.gov/" target="_blank">Michigan Census Bureau</a>
+        and are periodically updated to ensure accurate trend analysis.
+    </p>
 </body>
 </html>

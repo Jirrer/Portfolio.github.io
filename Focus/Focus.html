@@ -4,18 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Irrer - Focus</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../ProjectStyles.css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <h1>Focus</h1>
     <hr>
 </head>
 <body>
-    <a href="../index.html">Back</a>
+    <a href="../index.html"><- Back</a>
     <br><a href="https://github.com/Jirrer/Focus" target="_blank">GitHub</a>
     <br><a href="Focus - Installer.exe" download>Installer</a>
     <hr>
+    <h2>Description</h2>
+    <p>
+        Focus is a lightweight Windows desktop application designed to help users manage their time effectively.
+        Unlike a traditional timer, Focus is “smart” — it runs for a set duration before reminding you to take a
+        break, but it automatically pauses if it detects that the user has been inactive for too long. This ensures
+        that break reminders are meaningful and only occur when you’re actually working.
+        <br><br>
+        Focus also monitors GPU usage to determine if inactivity is due to passive activities, such as watching
+        videos or streaming media. In such cases, the timer continues running, ensuring that planned break intervals
+        remain accurate.
+    </p>
 
-    <h1>Description</h1>
-    
+    <h2>How-To</h2>
+    <p>
+        To use Focus, set your desired work session duration in the app’s main interface and press “Start.”
+        The timer will begin counting down. If you are inactive for an extended period, Focus will pause
+        automatically unless it detects ongoing GPU activity (e.g., video playback). When the timer reaches zero,
+        a notification will prompt you to take a break.
+    </p>
+    <hr>
+
+    <h1>Documentation</h1>
+    <h2>Prerequisites</h2>
+    <p>
+        Focus requires the following before it can run on your machine:
+        <ul><li>
+            Windows 10 or higher - The application is designed for Windows desktop environments.
+        </li></ul>
+        <ul><li>
+            GPU monitoring permissions - Needed to allow the application to check GPU usage.
+        </li></ul>
+    </p>
+
+    <h2>Configuring Application Settings</h2>
+    <p>
+        The application’s settings can be accessed within the source code.
+    </p>
+
+    <h2>Frontend</h2>
+    <p>
+        Focus’s frontend is written in C# using the WPF (Windows Presentation Foundation) framework. The UI is
+        designed to be minimal and distraction-free, with quick-access controls for starting, pausing, and resetting
+        the timer.
+    </p>
+
+    <h2>Backend</h2>
+    <h3>Activity Detection</h3>
+    <p>
+        Focus uses Windows system hooks to detect keyboard and mouse input for determining user activity. If no
+        input is detected for longer than the configured idle threshold, the timer will pause automatically — unless
+        GPU usage suggests the user is engaged in passive activity.
+    </p>
+
+    <h3>GPU Monitoring</h3>
+    <p>
+        If GPU usage is above the configured percentage threshold, Focus assumes the user is engaged (e.g., watching a video) and keeps
+        the timer running even without direct input.
+    </p>
+
+    <h3>Notifications</h3>
+    <p>
+        When the timer reaches zero, an alarm timer is played, prompting the user to take a break.
+    </p>
 </body>
 </html>

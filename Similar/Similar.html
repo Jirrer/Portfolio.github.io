@@ -4,17 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>John Irrer - Similar</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../ProjectStyles.css">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <h1>Similar</h1>
     <hr>
 </head>
 <body>
-    <a href="../index.html">Back</a>
+    <a href="../index.html"><- Back</a>
     <br><a href="https://github.com/Jirrer/Similar" target="_blank">GitHub</a>
     <br><a href="https://youtu.be/sMvVUkBSsJI" target="_blank">Tutorial</a>
     <hr>
+    <h2>Description</h2>
+    <p>
+        Similar is a web-based application that generates a new recommended playlist based on an existing
+        playlist provided by the user. The app supports both Spotify and Apple Music as sources, allowing you
+        to choose your preferred music platform.
+        <br><br>
+        To generate recommendations, Similar functions as a Gemini AI wrapper. Once a playlist is submitted,
+        the application sends it through the Gemini model to analyze the tracklist and identify 30 new songs
+        that match the style, genre, and mood of the original. The recommended songs are then displayed directly
+        on the web interface for easy viewing and access.
+    </p>
 
-    
+    <h2>How-To</h2>
+    <p>
+        Using Similar is straightforward:
+        <ol>
+            <li>Select your preferred music platform: Spotify or Apple Music.</li>
+            <li>Paste the URL of a public playlist from the chosen platform into the search box.</li>
+            <li>Click the "Generate" button.</li>
+        </ol>
+        Within moments, Similar will display 30 recommended tracks on the screen, curated to match the feel of
+        your original playlist.
+    </p>
+    <hr>
+
+    <h1>Documentation</h1>
+    <h2>Prerequisites</h2>
+    <p>
+        Similar requires the following before it can run:
+        <ul><li>
+            Node.js 16 or higher - Required for running the backend API calls and handling Gemini requests.
+        </li></ul>
+        <ul><li>
+            Spotify Web API key (for Spotify support) - Stored in a <code>.env</code> file for secure use.
+        </li></ul>
+        <ul><li>
+            Apple Music API key (for Apple Music support) - Also stored in the <code>.env</code> file.
+        </li></ul>
+        <ul><li>
+            Gemini API key - Used to access the Gemini AI model for playlist recommendations.
+        </li></ul>
+    </p>
+
+    <h2>Configuring Environment Variables</h2>
+    <p>
+        All API keys must be placed in the <code>.env</code> file located in the project root. Example:
+    </p>
+    <pre>
+    SPOTIFY_API_KEY=your_spotify_key_here
+    APPLE_MUSIC_API_KEY=your_apple_music_key_here
+    GEMINI_API_KEY=your_gemini_key_here
+    </pre>
+    <p>
+        Ensure these keys are kept private and never exposed in public repositories.
+    </p>
+
+    <h2>Frontend</h2>
+    <p>
+        The frontend is built using HTML, CSS, and JavaScript, with a responsive layout for desktop and mobile
+        devices. It includes input fields for playlist URLs, a platform selector, and a results area to display
+        recommended songs.
+    </p>
+
+    <h2>Backend</h2>
+    <h3>Gemini Integration</h3>
+    <p>
+        The backend acts as a Gemini AI wrapper, sending playlist data for analysis. Gemini processes the submitted
+        playlist, evaluates track characteristics, and returns 30 curated recommendations.
+    </p>
+
+    <h3>APIs</h3>
+    <p>
+        Depending on the chosen platform, the backend interacts with either:
+        <ul>
+            <li><a href="https://developer.spotify.com/documentation/web-api" target="_blank">Spotify Web API</a></li>
+            <li><a href="https://developer.apple.com/documentation/applemusicapi" target="_blank">Apple Music API</a></li>
+        </ul>
+        These APIs are used to validate playlist URLs, fetch track details, and format the data for Gemini’s
+        processing.
+    </p>
+
+    <h3>Display of Results</h3>
+    <p>
+        Once the 30 recommended tracks are returned from Gemini, they are displayed dynamically on the results
+        page. Each track listing includes the song title, artist, and an optional direct link to the song on the
+        selected music platform.
+    </p> 
 </body>
 </html>
