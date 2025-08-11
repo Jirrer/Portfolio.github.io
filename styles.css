@@ -46,9 +46,10 @@ h2 {
     font-weight: 100;
 }
 
-#contactInfo p {
+#contactInfo {
     font-family: 'Inter';
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 100;
     text-decoration: none;
+    text-align: center;
 }
